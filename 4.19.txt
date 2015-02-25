@@ -1,0 +1,22 @@
+;Eva is right.
+                                        ;To implement Eva 's idea, consider:
+
+(let ((a 1))
+  (define (f x)
+    (define b (+ a x))
+    (define a 5)
+    (+ a b))
+  (f 10))
+
+                                        ;will be transformed to
+
+(let ((a 1))
+  (define (f x)
+    (define b (lambda () (+ (a) x)))
+    (define a (lambda () 5))
+    (+ (a) (b)))
+  (f 10))
+
+                                        ;however it's quite difficult to implement, and inefficiency
+
+    

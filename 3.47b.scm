@@ -1,0 +1,15 @@
+(define (make-sem n)
+  (let ((cell (list false n)))
+    (define (the-sem op)
+      (cond ((eq? op 'acquire)
+             (if (test-and-set! cell)
+                 (the-sem 'acquire)
+                 (begin
+                   (set-cdr! cell (-1+ (cdr cell)))
+                   (clear! cell))))
+            ((eq? op 'release)
+             (if (test-and-set! cell)
+                 (the-sem 'release)
+                 (begin
+                   (set-cdr! cell (1+ (cdr cell)))
+                   (clear! cell))))))))

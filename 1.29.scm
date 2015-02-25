@@ -1,0 +1,18 @@
+(define (integral f a b n)
+  (define h (/ (- b a) n))
+  (define (add2 n) (+ n 2))
+  (define (y k) (f (+ a (* k h))))
+  (define (sum term a next b)
+    (if (> a b)
+        0
+        (+ (term a)
+           (sum term (next a) next b))))
+  (/ (* (+ (* (sum y 1 add2 (- n 1)) 4)
+           (* (sum y 2 add2 (- n 2)) 2)
+           (y 0)
+           (y n)) h) 3))
+
+(define (cube n) (* n n n))
+(integral cube 0 1 5)
+(integral cube 0 1 100)
+(integral cube 0 1 1000)

@@ -1,0 +1,4 @@
+1.process A test if cell is true (no)
+2.process B test if cell is true (no)
+3.process A set cell to true, and claim that he acquire the mutex, 
+4.process B set cell to true, and clain that he acquire the mutex.

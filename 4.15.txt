@@ -1,0 +1,13 @@
+1.if (try try) halts:
+     then (halts? try try) should return true
+     then (run-forever) is called
+     then (try try) won't halts
+     conflict
+
+2.if (try try) not halts:
+     then (halts? try try) should return false
+     then 'halted is returned
+     then (try try) halts.
+     conflict
+
+;funny reasoning!

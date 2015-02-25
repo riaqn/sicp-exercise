@@ -1,0 +1,13 @@
+it's possible to implement 'unless' in applicative order as a special
+form(just like 'if' being implemented).
+Of cource in that way, 'unless' would be "syntax", not a procedure.
+Since if it's a procedure, all of its paramters would be evaluated
+before 'unless' decide which one to evaluate.
+
+Implementation as a derived expression is quite easy. We just have to
+transform it into an 'if' clause.
+
+where would it be useful? maybe sometimes we get tired of
+(map (lambda (A B C) (unless A B C)) a b c)
+instead of
+(map unless a b c)

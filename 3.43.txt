@@ -1,0 +1,15 @@
+first let 's have a look at the exchange procedure
+(define (exchange account1 account2)
+  (let ((difference (- (account1 'balance)
+                       (account2 'balance))))
+    ((account1 'withdraw) difference)
+    ((account2 'deposit) difference)))
+
+why the condition can be violated:
+after the exchange calcualted  the difference, one or both of the balance changed, invalid the difference, but the withdraw and deposit will go on with the wrong difference.
+
+why the sum of the balances will be preserved:
+since we have guaranteed that the balance of a account will always accord to the withdraw and deposit history, and we guaranteed that the "difference" variable stay same in the exchange procedure. So we can ensure that the amount of withdraw from one account always equal to the amount of deposit to the other account.
+
+how even this condition would be violated if we did not serilize the transactions on individual accounts:
+since we cannot guarantee the consistant of the balance and its operation history.

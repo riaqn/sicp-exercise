@@ -1,0 +1,13 @@
+this program won't work, since the (factorial (- n 1)) will be
+evaluated anyway, which lead to infinite loop.
+however, it should work in a normal-order language. In this language,
+(* n (factorial (- n 1))) will be evaluated only when (= n 1) return
+true.
+
+To be more accurate, (factorial 5) have the following trace:
+(* 5 (factorial (- 5 1)))
+(* 5 (* 4 (factorial (- 4 1))))
+(* 5 (* 4 (* 3 (factorial (- 4 1)))))
+
+...
+and so on.

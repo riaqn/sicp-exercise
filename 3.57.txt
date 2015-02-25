@@ -1,0 +1,5 @@
+Computing the n-th fibonacci number require n addition.
+However, if we implemented delay without the memo-proc, we may need
+exponential addition, since to compute the n-th fibonacci numbers, we
+have to compute the (n-1)-th and (n-2)-th, each of which require
+further computation, this lead to exponential calculation.

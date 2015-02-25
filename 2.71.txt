@@ -1,0 +1,11 @@
+in such a tree, we only need 1 bits to encode the most frequent symbol
+and n-1 bits for the least frequent symbol
+
+
+for n = 5:
+
+ / \
+5  /\
+  4 /\
+   3 /\
+    2  1

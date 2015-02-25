@@ -1,0 +1,7 @@
+a. apply-generic will complain that there 's no operation exp binded
+for two ordinary number
+b. Louis is wrong about the coercion with argument of the same type.
+   It do not make any difference. apply-generic is working correctly.
+   some time it's easier to convert two same-type argument to another
+   type, to make things clear.
+

@@ -1,0 +1,2 @@
+because for every n, it calculate the fibonacci number for only once.
+it won't work.

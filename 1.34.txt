@@ -1,0 +1,5 @@
+error, since the numerical 2 is called as a function.
+explain:
+(f f)
+(f 2)
+(2 2) -> 2 is called as a function

@@ -1,0 +1,6 @@
+(define (let-bindings exp) (cadr exp))
+(define (let-body exp) (caddr exp))
+(define (let->combination exp)
+  (let ((bindings (let-bindings exp)))
+    (list (cons 'lambda (cons (map car bindings) (let-body exp)))
+          (map cadr bindings))))

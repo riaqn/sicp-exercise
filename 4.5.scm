@@ -1,0 +1,16 @@
+(define (expand-clauses clauses)
+  (if (null? clauses)
+      'false                          ; no `else' clause
+      (let ((first (car clauses))
+            (rest (cdr clauses)))
+        (if (cond-else-clause? first)
+            (if (null? rest)
+                (sequence->exp (cond-actions first))
+                (error "ELSE clause isn't last -- COND->IF"
+                       clauses))
+            (make-if (cond-predicate first)
+                     (let ((actions (cond-actions first)))
+                       (if (eq? (car actions) '=>)
+                           (list (cadr actions) (cond-predicate first))
+                           (sequence->exp actions)))
+                     (expand-clauses rest))))))

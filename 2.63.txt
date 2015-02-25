@@ -1,0 +1,3 @@
+a.Yes, they should produce same result for same tree
+results should all be (1 3 5 7 9 11)
+b.No, the second grows slowly(O(n)), while the first grows faster(O(nlogn))

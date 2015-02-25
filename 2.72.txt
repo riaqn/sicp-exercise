@@ -1,0 +1,5 @@
+for the special case described in 2.71:
+for the most frequent symbol,we need O(n),
+for the least frequent symbol, we need O(n^2).
+
+for an average(balanced) tree, we need O(n) for all symbol.

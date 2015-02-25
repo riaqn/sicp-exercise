@@ -1,0 +1,5 @@
+Of course it 's slow. For every try in level k, it do a search for
+level k-1. That is n times slower every level, and there is n level,
+so it's takes (n^n)T to solve level n queen problem.
+
+for n=8, it 's (8^8)*T, which is about 1.7e+7 times T.

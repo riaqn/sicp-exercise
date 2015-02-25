@@ -1,0 +1,14 @@
+we only modify the assoc procedure, instead of scaning through the
+list of records, we compare the key with the key of the current
+record. if it's smaller, then we goto the record that is the left
+child of the current record, right otherwise. If the record we jumpped
+to does not exist, return the last record in our path. Once we found a record whose key is same
+as the key we are searching for, we have the desired record.
+
+the lookup should call assoc, and verify the record it returns is the
+desired.return false otherwise.
+
+the insert should call assoc, if the returned record is the desired,
+just set its value. otherwise, create a new record filled with key and
+value, and insert it to left or right side of the returned one,
+depends on whether it's smaller than the returned one or not.

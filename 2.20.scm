@@ -1,0 +1,11 @@
+(define (same-parity . l)
+  (define (iter l p)
+    (if (= (length l) 0)
+        '()
+        (if (= (remainder (car l) 2) p)
+            (cons (car l) (iter (cdr l) p))
+            (iter (cdr l) p))))
+  (iter l (remainder (car l) 2)))
+
+(same-parity 1 2 3 4 5 6 7)
+(same-parity 2 3 4 5 6 7)

@@ -1,0 +1,5 @@
+No we needn't. In exchange problem, we need the difference calculated
+up-to-date when we do deposit and withdraw, to REALLY transfer the
+difference between them. In transfer problem, the amount of the
+balances is not important any more. Even if one or both of the
+accounts changed its state, we still have to transfer the same amount of money.

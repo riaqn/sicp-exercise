@@ -1,0 +1,10 @@
+(magnitude '(complex rectangular 3 . 4))
+(apply-generic 'magnitude '(complex rectangular 3 . 4))
+
+//in complex package
+(magnitude '(rectangular 3 . 4))
+(apply-generic 'matnitude '(rectangular 3 . 4))
+
+//in rectangular package
+(magnitude '(3 . 4))
+5

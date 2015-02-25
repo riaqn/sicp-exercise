@@ -1,0 +1,11 @@
+for example, for the expression (map + '(1 2)):
+
+(map + '(1 2))
+
+note that + will be translated into
+('primitive +)
+
+so it would be
+(apply-in-underlying-scheme map ('primitive +) '(1 2))
+
+which won't work

@@ -1,0 +1,13 @@
+(define (make-sem n)
+  (let ((sem n)
+        (mutex (make-mutex)))
+    (lambda (op)
+      (cond ((eq? op 'acquire)
+             (mutex 'acquire)
+             (set! sem (-1+ sem))
+             (mutex 'release))
+            ((eq? op 'release)
+             (mutex 'acquire)
+             (set! sem (1+ sem))
+             (mutex 'release))))))
+  

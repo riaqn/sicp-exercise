@@ -1,0 +1,6 @@
+If the user use the exported serializer to constructed his own
+procedure to do operation on his account, he cannot call withdraw or
+deposit and more. Particularly, when serialized-exchange is called,
+the two serializers is occupied, then we call withdraw on one account,
+withdraw call its serializer, since he think that he is dealing with a
+former procedure, and withdraw have to wait. Then it hangs forever.

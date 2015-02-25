@@ -1,0 +1,3 @@
+when b has a new value, the multiplier will be informed about the new
+value. however, it then found that only one of three connector has
+value, which is not enough for calculation.

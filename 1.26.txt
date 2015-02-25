@@ -1,0 +1,8 @@
+with explicit multiplication, you have to calculate the (expmod base
+(/ exp 2) m) twice.
+
+if exp is odd, O(exp) = O(exp-1) + 1
+if exp is even, O(exp) = O(exp / 2) * 2
+
+with the fact that O(1) = 1, we can conclude that O(n) =n.
+

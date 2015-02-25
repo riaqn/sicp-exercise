@@ -1,0 +1,8 @@
+in the first approach 's iter procedure, every item is poped from the
+begining of the list, and pushed to the begining of the final list.
+which will result in a reverse order of the desired.
+
+in the second approach 's iter, the answer is generated as a pair,
+with a compound pair as first item, and a single number as second
+item.
+which is like ((((nil 1) . 4) . 9) . 16), which is not a list.

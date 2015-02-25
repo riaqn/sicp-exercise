@@ -1,0 +1,9 @@
+a.when evaluate the expresstion '(define x 3)', Louis's evaluator will
+treat it as a application, whose operator is 'define' and operand is
+(x 3).
+
+b.To achieve this we only have to modify the group of application
+predicates and selectors.
+(define (application? exp) (eq? (car exp) 'call))
+(define (operator exp) (cadr exp))
+(define (operands exp) (cddr exp))

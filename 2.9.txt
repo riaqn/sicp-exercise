@@ -1,0 +1,11 @@
+(a b) + (c d) = (a+c b+d)
+-> d = (b+d) - (a+c) = (b-a)+(d-c)=d1+d2
+
+(a b) - (c d) = (a-d b-c)
+-> d = (b-c) - (a-d) = (b-a)+(d-c)=d1+d2
+
+(a b) * (c d) = (a*c b*d)
+-> d = b*d - a*c = ???
+
+(a b) / (c d) = (a/d b/c)
+-> d = b/c - a/d = ???

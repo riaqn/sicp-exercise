@@ -1,0 +1,8 @@
+we will only get a stream of
+(s0, t0)
+(s1, t1)
+(s0, t1)
+(s2, t2)
+(s0, t2)
+(s3, t3)
+...

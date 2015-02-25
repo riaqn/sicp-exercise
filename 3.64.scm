@@ -1,0 +1,6 @@
+(define (stream-limit s tol)
+  (define (iter first s tol)
+    (if (< (abs (- first (stream-car s))) tol)
+        (stream-car s)
+        (iter (stream-car s) (stream-cdr s) tl)))
+  (iter (stream-car s) (stream-cdr s) tol))

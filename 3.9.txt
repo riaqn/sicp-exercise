@@ -1,0 +1,18 @@
+recursion version:
+global<-(n=6)
+global<-(n-5)
+global<-(n=4)
+global<-(n-3)
+global<-(n=2)
+global<-(n-1)
+
+iterative version:
+global<-(n=6)
+global<-(product=1 counter=1 maxcount=6)
+global<-(product=1 counter=2 maxcount=6)
+global<-(product=2 counter=3 maxcount=6)
+global<-(product=6 counter=4 maxcount=6)
+global<-(product=24 counter=5 maxcount=6)
+global<-(product=120 counter=6 maxcount=6)
+global<-(product=720 counter=7 maxcount=6)
+

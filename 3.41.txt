@@ -1,0 +1,2 @@
+No, maybe not. reding the balance is a instant operation, and don't
+have to be serialized.

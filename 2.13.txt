@@ -1,0 +1,9 @@
+(c p) for percent representation
+(a,b) for interval representation
+
+(c1 p1) * (c1 p2) = (c1-c1p1,c1+c1p1) * (c2-c2p2,c2+c2p2)
+                  = (c1c2-c1c2p1-c1c2p2+c1c2p1p2,
+                     c1c2+c1c2p1+c1c2p2+c1c2p1p2)
+                  = (c1c2-(p1+p2)c1c2,
+                     c1c2+(p1+p2)c1c2)
+                  = (c1c2 p1+p2)

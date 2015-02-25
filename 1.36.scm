@@ -1,0 +1,15 @@
+(define (fixed-point f first-guess tolerance)
+  (define (close-enougn? v1 v2)
+    (< (abs (- v1 v2))
+       tolerance))
+  (define (try guess)
+    (display (exact->inexact guess))
+    (newline)
+    (let ((next (car (list (f guess)
+                      (/ (+ guess  (f guess)) 2)))))
+      (if (close-enougn? guess next)
+          next
+          (try next))))
+  (try first-guess))
+
+(exact->inexact (fixed-point (lambda (x) (/ (log 1000) (log x))) 10 0.0000001))

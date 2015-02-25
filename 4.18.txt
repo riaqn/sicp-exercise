@@ -1,0 +1,12 @@
+no, it won't work.
+
+(lambda (f y0 dt)
+  (let ((y '*unassigned)
+        (dy '*unassigned))
+    (let ((a (integral (delay dy) y0 dt))
+          (b (stream-map f y)))
+      (set! y a)
+      (set! dy b))
+    y))
+
+note that when b is being defined, y is still *unsigned, which is the parament to stream-map, which won't work.

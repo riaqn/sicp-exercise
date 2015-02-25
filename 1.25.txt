@@ -1,0 +1,2 @@
+No, the (fast-expt) will increase dramatically, and consume lots
+of cpu and memory, which result in much slower calculation.
